@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<body>
+    <div class="container">
+        <h5 style="text-align:center;line-height:100px;color:crimson;">Number Guessing Game</h5>
+        <form action="./move.jsp" method="POST">
+            <input type="number" style="text-align:center;font-size:30px;" placeholder="Enter Your Guess" name="user-guess" /><br><br>
+            <div class="valign-wrapper" style="display:flex;flex-direction:column;">
+                <button class="waves-effect green waves-light btn" type="submit">Guess</button><br>
+            </div>
+        </form>
+        <form method="POST" class="valign-wrapper" style="display:flex;flex-direction:column;" action="./restart.jsp">
+            <button class="waves-effect red waves-light btn" onclick="clearInput();" type="submit">Restart Game</button>
+        </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        function clearInput(){
+            document.querySelector('input').value="";
+        }
+    </script>
+</body>
+</html>
