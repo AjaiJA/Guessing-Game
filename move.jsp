@@ -10,7 +10,7 @@
         count=(Integer)session.getAttribute("attempt");
     }
 
-    Integer randomNumber=55;
+    Integer randomNumber=new Integer(new java.util.Random().nextInt(100));
     Integer userNumber=Integer.parseInt(request.getParameter("user-guess"));
     session.setAttribute("attempt",0);
     session.setAttribute("userNumber",userNumber);
